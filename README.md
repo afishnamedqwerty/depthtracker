@@ -1,33 +1,43 @@
-Project Overview
+# MoE NSA Transformer Depth Heatmap and Visual Object Tracking
+
+## Overview
 This repository implements a cutting-edge multi-modal Mixture-of-Experts (MoE) Transformer architecture designed for two primary tasks: predicting depth heatmaps and performing visual object tracking using multi-input video feeds. The project integrates innovative techniques such as native sparse attention mechanisms and motion modeling with Kalman filters, drawing insights from the Samurai paper.
 
-Key Features
+## Architecture Design
 Multi-modal MoE Transformer:
 
 Combines multiple expert networks to handle diverse tasks efficiently.
 Designed for scalability and performance in multi-input scenarios.
-Depth Heatmap Prediction:
+
+
+### Depth Heatmap Prediction:
 
 Predicts depth information represented as heatmaps, crucial for spatial understanding in applications like robotics and autonomous vehicles.
-Visual Object Tracking (VOT):
+
+### Visual Object Tracking (VOT):
 
 Tracks objects across video sequences using advanced motion modeling techniques.
 Incorporates Kalman filters to enhance tracking accuracy and reliability.
-Sparse Attention Mechanisms:
+
+### Sparse Attention Mechanisms:
 
 Employs native sparse attention (NSA) for efficient computation, reducing unnecessary calculations while maintaining model performance.
 Optimized for modern GPU architectures with hardware-aligned processing.
-Innovations
-Hardware-Aligned Design:
+
+### Hardware-Aligned Design:
 
 Block-wise processing and memory access patterns optimized for Tensor Core utilization on GPUs like the A100, ensuring high computational efficiency.
-Dynamic Hierarchical Sparsity:
+
+### Dynamic Hierarchical Sparsity:
 
 Combines coarse-grained token compression with fine-grained token selection to reduce computational load while preserving important context.
-Training-Aware Design:
+
+### Training-Aware Design:
 
 Ensures compatibility with end-to-end training processes, maintaining stability and performance without sacrificing model capabilities.
-Project Structure
+
+## Project Structure
+
 project/
 ├── models/
 │   ├── moe_transformer.py
@@ -54,12 +64,13 @@ Inference:
 
 Use the trained model to generate depth heatmaps and perform visual object tracking on video feeds.
 
-Evaluation Metrics
-Depth Heatmap Prediction:
+## Evaluation Metrics
+### Depth Heatmap Prediction:
 
 Mean Absolute Error (MAE) between predicted and ground truth depth values.
 Peak Signal-to-Noise Ratio (PSNR) to measure the quality of reconstructed depth maps.
-Visual Object Tracking (VOT):
+
+### Visual Object Tracking (VOT):
 
 Tracking Accuracy: Percentage of frames where the tracked object is correctly identified.
 Intersection over Union (IoU): Measure of overlap between predicted and ground truth bounding boxes.
