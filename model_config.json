@@ -1,0 +1,10 @@
+{
+    "embed_dim": 512,
+    "num_heads": 8,
+    "num_experts": 8,
+    "dropout": 0.1,
+    "block_size": 64,
+    "multi_modal": true,
+    "depth_heatmap_enabled": true,
+    "visual_tracking_enabled": true
+  }
